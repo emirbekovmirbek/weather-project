@@ -1,0 +1,8 @@
+.short-info {
+  margin-top: 15px;
+  text-align: center;
+}
+.short-info__icon {
+  width: 150px;
+  margin: 0 auto;
+}

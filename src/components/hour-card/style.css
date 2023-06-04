@@ -1,0 +1,18 @@
+.card-small {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(165.75deg, #F4F2F2 7.77%, #EAEAEA 94.11%);
+  box-shadow: -7.78321px -7.78321px 31.1329px rgba(255, 255, 255, 0.85), 7.78321px 7.78321px 31.1329px -3.11329px rgba(91, 115, 134, 0.78);
+  border-radius: 50px;
+}
+.card-small__status-icon {
+  width: 80px;
+  height: 80px;
+}
+.small_temp {
+  font-weight: 800;
+}
+.dark .card-small {
+  background: rgba(85, 126, 246, 0.1);
+  box-shadow: -12.552px -12.552px 41.84px rgba(85, 93, 131, 0.56), 16.736px 16.736px 37.656px rgba(54, 59, 87, 0.2), inset 2.092px 2.092px 2.092px rgba(38, 49, 105, 0.05), inset -2.092px -2.092px 8.368px rgba(83, 92, 136, 0.12);
+}

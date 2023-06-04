@@ -1,0 +1,29 @@
+.list-city {
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  height: 150px;
+  background: inherit;
+}
+
+.list-city__item {
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.list-city__item:hover {
+  border-color: #70cff2;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.input__input:focus + .list-city {
+  visibility: visible !important;
+}

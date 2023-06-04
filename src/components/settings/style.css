@@ -1,0 +1,27 @@
+.setting {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.setting__units {
+  display: flex;
+}
+
+.setting__unit-divider {
+  margin: 0 5px;
+  width: 2px;
+  background: #000000;
+}
+
+.setting__icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.active {
+  color: #23b9dc;
+}
+.dark .active {
+  color: #3E64E7;
+}

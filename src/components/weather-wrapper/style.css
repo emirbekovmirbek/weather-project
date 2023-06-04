@@ -1,0 +1,21 @@
+.weather-wrapper {
+  background: linear-gradient(180deg, rgba(244, 249, 253, 0.35) 0%, rgba(245, 245, 247, 0.35) 100%);
+  backdrop-filter: blur(38.9161px);
+  border-radius: 93.3986px;
+  max-width: 450px;
+  width: 100%;
+  margin: 100px auto;
+  padding: 50px;
+}
+.dark .weather-wrapper {
+  background: linear-gradient(106.38deg, #4D547A 2.01%, #2B2F48 99.47%);
+  box-shadow: 16.736px 16.736px 62px rgba(29, 31, 45, 0.42), -10px -10px 56px rgba(133, 138, 174, 0.38);
+  color: #F4F2F2;
+}
+
+@media screen and (max-width: 480px) {
+  .weather-wrapper {
+    padding: 20px 30px;
+    border-radius: 50px;
+  }
+}

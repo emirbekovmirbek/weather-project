@@ -1,0 +1,55 @@
+.main-card {
+  max-width: 375px;
+  width: 100%;
+  padding: 30px 50px;
+  background: linear-gradient(180deg, rgba(188, 186, 253, 0.52) 0%, #71BFF0 100%);
+  box-shadow: -7.78321px -7.78321px 31.1329px rgba(255, 255, 255, 0.85), 7.78321px 7.78321px 31.1329px -3.11329px rgba(91, 115, 134, 0.78), inset 12.4531px 14.0098px 14.0098px rgba(255, 255, 255, 0.33), inset -9.33986px -10.8965px 12.4531px rgba(0, 0, 0, 0.05);
+  border-radius: 46.6993px;
+  color: #F8F8F8;
+}
+.main-card__option {
+  display: flex;
+  justify-content: space-between;
+}
+.main-card__humidity-top {
+  display: flex;
+  align-items: center;
+}
+
+.main-card__humidity-text {
+  margin-left: 12px;
+}
+
+.main-card__humidity-bottom {
+  font-weight: 800;
+  font-size: 20px;
+  text-shadow: 0px 3.11329px 6.22657px #99B2F0;
+}
+
+.main-card__title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 35px;
+  text-shadow: 0px 3.11329px 6.22657px rgba(153, 178, 240, 0.74);
+}
+
+.main-card__day {
+  color: #353E5E;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+.dark .main-card {
+  background: linear-gradient(106.38deg, #4D547A 2.01%, #2B2F48 99.47%);
+  box-shadow: -12.552px -12.552px 41.84px rgba(85, 93, 131, 0.56), 16.736px 16.736px 37.656px rgba(54, 59, 87, 0.2), inset 2.092px 2.092px 2.092px rgba(38, 49, 105, 0.05), inset -2.092px -2.092px 8.368px rgba(83, 92, 136, 0.12);
+}
+.dark .main-card__day {
+  color: #F0F3FF;
+}
+
+@media screen and (max-width: 480px) {
+  .main-card {
+    padding: 20px 30px;
+  }
+}

@@ -1,0 +1,38 @@
+.input {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.input__wrapper {
+  width: 100%;
+  position: relative;
+}
+.input__input {
+  outline: none;
+  background: transparent;
+  padding: 10px 14px;
+  border: none;
+  border-bottom: 2px solid #9ac8f4;
+  width: 100%;
+  font-size: 16px;
+}
+.input__input:focus {
+  border-color: #70cff2;
+}
+.input__btn {
+  border: none;
+  background: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.dark .input__input:focus {
+  border-color: #3E64E7;
+} 
+.dark .input__input {
+  border-color: #3E64E7;
+  color: #F4F2F2;
+} 
+.dark .input__input::placeholder {
+  color: #F0F3FF;
+} 
