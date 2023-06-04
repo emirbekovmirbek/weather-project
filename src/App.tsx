@@ -10,7 +10,7 @@ function App() {
   const dispatch = useAppDispatch();
   useEffect(() => {
     const getLocation = async () => {
-      const response = await fetch('https://ip-api.com/json');
+      const response = await fetch('http://ip-api.com/json');
       const location: ILocation = await response.json();
       dispatch(setCityName(location.city))
       dispatch(fetchWeather({lat :location.lat, lon: location.lon}))
