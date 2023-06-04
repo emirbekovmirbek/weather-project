@@ -38,7 +38,6 @@ export default function Input() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     dispatch(onChangeCity(city))
-    console.log(city);
     dispatch(fetchWeather(city.coord))
     setCity(initialValue)
   }

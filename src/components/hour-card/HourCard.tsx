@@ -11,7 +11,6 @@ interface IPropsType {
 
 export default function HourCard({ daily }: IPropsType) {
   const unit = useAppSelector(selectUnit)
-  console.log(daily.weather[0].icon);
   return (
     <div className="card-small">
       <p className="card-small__time">{dayjs.unix(daily.dt).format('dddd')}</p>
