@@ -10,12 +10,14 @@ interface CitiesState {
 
 const initialState: CitiesState = {
   city: {
-    lat: 0,
-    lon: 0,
-    country: '',
-    city: '',
+    coord: {
+      lat: 0,
+      lon: 0
+    },
     state: '',
-    name: ''
+    name: '',
+    sys: {'' : ''},
+    id: 0
   },
   cities: []
 }
