@@ -4,8 +4,13 @@
   overflow: auto;
   height: 150px;
   background: inherit;
+  z-index: 99;
+  background-color: #d5e7ef;
+  padding: 0 10px;
 }
-
+.dark .list-city  {
+  background: linear-gradient(106.38deg, #4D547A 2.01%, #2B2F48 99.47%);
+}
 .list-city__item {
   border-bottom: 1px solid transparent;
   cursor: pointer;
