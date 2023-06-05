@@ -10,7 +10,7 @@ export default function WeatherShortInfo() {
     <div className="short-info">
       <h1 className="short-info__title">{city}</h1>
       <div className="short-info__icon">
-        <img src={`https://openweathermap.org/img/wn/${weather.current.weather[0].icon}.png`} alt={weather.current.weather[0].main} />
+        <img src={`https://openweathermap.org/img/wn/${weather.current.weather[0].icon}@4x.png`} alt={weather.current.weather[0].main} />
       </div>
     </div>
   )
