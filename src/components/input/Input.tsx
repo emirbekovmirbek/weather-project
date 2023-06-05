@@ -52,11 +52,13 @@ export default function Input() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const getCityWeather = (city.id !== 0 || cities.length === 0)  ? city : cities[0] 
-    dispatch(onChangeCity(getCityWeather))
-    dispatch(fetchWeather(getCityWeather.coord))
-    dispatch(onChangeVisible(false))
-    setCity(initialValue)
+    if(city.name !== '') {
+      const getCityWeather = (city.id !== 0 || cities.length === 0)  ? city : cities[0] 
+      dispatch(onChangeCity(getCityWeather))
+      dispatch(fetchWeather(getCityWeather.coord))
+      dispatch(onChangeVisible(false))
+      setCity(initialValue)
+    }
   }
 
   const handleSelectCity = (param : ICity) => {     
