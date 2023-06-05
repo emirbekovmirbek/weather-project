@@ -21,10 +21,10 @@
   border-color: #70cff2;
 }
 
-.hidden {
-  visibility: hidden !important;
-}
-
 .show {
   visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
 }

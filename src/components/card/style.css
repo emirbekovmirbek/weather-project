@@ -1,15 +1,17 @@
 .main-card {
-  max-width: 375px;
-  width: 100%;
+  width: 50%;
   padding: 30px 50px;
   background: linear-gradient(180deg, rgba(188, 186, 253, 0.52) 0%, #71BFF0 100%);
   box-shadow: -7.78321px -7.78321px 31.1329px rgba(255, 255, 255, 0.85), 7.78321px 7.78321px 31.1329px -3.11329px rgba(91, 115, 134, 0.78), inset 12.4531px 14.0098px 14.0098px rgba(255, 255, 255, 0.33), inset -9.33986px -10.8965px 12.4531px rgba(0, 0, 0, 0.05);
   border-radius: 46.6993px;
   color: #F8F8F8;
+  display: flex;
+  align-items: center;
 }
 .main-card__option {
-  display: flex;
-  justify-content: space-between;
+  width: 50%;
+  display: grid;
+  gap: 15px;
 }
 .main-card__humidity-top {
   display: flex;
@@ -29,12 +31,13 @@
 .main-card__title {
   text-align: center;
   font-weight: 800;
-  font-size: 30px;
+  font-size: 64px;
   line-height: 35px;
   text-shadow: 0px 3.11329px 6.22657px rgba(153, 178, 240, 0.74);
 }
 
 .main-card__day {
+  font-size: 20px;
   color: #353E5E;
   opacity: 0.5;
   margin-top: 20px;
@@ -51,5 +54,22 @@
 @media screen and (max-width: 480px) {
   .main-card {
     padding: 20px 30px;
+    max-width: 375px;
+    width: 100%;
+    display: block;
+  }
+
+  .main-card__option {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .main-card__title {
+    font-size: 30px;
+  }
+  .main-card__day {
+    font-size: 14px;
   }
 }

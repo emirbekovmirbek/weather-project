@@ -8,6 +8,7 @@
 .card-small__status-icon {
   width: 80px;
   height: 80px;
+  margin: 0 auto;
 }
 .small_temp {
   font-weight: 800;

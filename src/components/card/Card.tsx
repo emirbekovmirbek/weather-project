@@ -34,10 +34,12 @@ export default function Card() {
           <p className="main-card__humidity-bottom">{weather?.current?.wind_speed}m/s</p>
         </div>
       </div>
-      <h2 className="main-card__title">
-        {getTemp(unit, weather.current.temp)} <span>{unit === 'metric' ? 'C' : 'F'}<sup>0</sup></span>
-      </h2>
-      <p className="main-card__day">{dayjs.unix(weather.current.dt).format('dddd HH:mm') || 'Tuesday 7:28 AM'}</p>
+      <div>
+        <h2 className="main-card__title">
+          {getTemp(unit, weather.current.temp)} <span>{unit === 'metric' ? 'C' : 'F'}<sup>0</sup></span>
+        </h2>
+        <p className="main-card__day">{dayjs.unix(weather.current.dt).format('DD MMMM dddd HH:mm') || 'Tuesday 7:28 AM'}</p>
+      </div>
     </div>
   )
 }

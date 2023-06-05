@@ -13,8 +13,7 @@ export default function HourCard({ daily }: IPropsType) {
   const unit = useAppSelector(selectUnit)
   return (
     <div className="card-small">
-      <p className="card-small__time">{dayjs.unix(daily.dt).format('dddd')}</p>
-      {/* <Rain className="card-small__status-icon"/> */}
+      <p className="card-small__time">{dayjs.unix(daily.dt).format('DD MMMM dddd')}</p>
       <div className="card-small__status-icon">
         <img src={`https://openweathermap.org/img/wn/${daily.weather[0].icon}.png`} alt={daily.weather[0].main} />
       </div>

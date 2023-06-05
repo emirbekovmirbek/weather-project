@@ -11,8 +11,10 @@ export default function WeatherWrappper() {
     <div className="weather-wrapper">
       <Setting/>
       <Input/>
+      <div className="weather-wrapper__block">
       <WeatherShortInfo/>
       <Card/>
+      </div>
       <ListHourWeather/>
     </div>
   )

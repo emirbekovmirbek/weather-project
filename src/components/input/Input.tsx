@@ -1,4 +1,4 @@
-import { useState, FormEvent, useEffect, ChangeEvent } from 'react'
+import { useState, FormEvent, useEffect, ChangeEvent, useRef } from 'react'
 import Search from '../../assets/icon/search.png'
 import './style.css'
 import { useAppDispatch } from '../../hooks/useAppDispatch'
@@ -29,12 +29,26 @@ export default function Input() {
   const [city, setCity] = useState<ICity>(initialValue)
   const debouncedValue = useDebounce<string>(city.name, 300)
   const cities = useAppSelector(selectCities)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if(city.name !== '') {
       dispatch(fetchCities(city.name))
     }
   }, [debouncedValue, dispatch])
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        dispatch(onChangeVisible(false))
+      }
+    }
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    }
+  }, [ref, dispatch])
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -45,8 +59,10 @@ export default function Input() {
     setCity(initialValue)
   }
 
-  const handleSelectCity = (param : ICity) => {    
-    setCity(param)
+  const handleSelectCity = (param : ICity) => {     
+    dispatch(onChangeCity(param))
+    dispatch(fetchWeather(param.coord))
+    setCity(initialValue)
   }
 
   const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -54,10 +70,9 @@ export default function Input() {
     dispatch(onChangeVisible(true))
     setCity(prev => ({...prev, name: value}))
   }
-
   return (
     <form className="input" onSubmit={handleSubmit}>
-      <div className="input__wrapper">
+      <div ref={ref} className="input__wrapper">
         <input
           className="input__input"
           type="text"
