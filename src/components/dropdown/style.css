@@ -22,13 +22,9 @@
 }
 
 .hidden {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .show {
   visibility: visible;
-}
-
-.input__input:focus + .list-city {
-  visibility: visible !important;
 }

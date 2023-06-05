@@ -1,13 +1,20 @@
-import { useState } from 'react'
 import { ICity } from '../../types/types'
 import './style.css'
+import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { useAppSelector } from '../../hooks/useAppSelector';
+import { selectVisibleDropdown } from '../../store/selectors';
+import { onChangeVisible } from '../../store/slices/optionsSlice';
 
 interface PropType {
   list: ICity[],
   onSelect: (city: ICity) => void
 }
 export default function Dropdown({list, onSelect}: PropType) {
-  const [visible, setVisible] = useState(false);
+  const dispatch = useAppDispatch()
+  const visible = useAppSelector(selectVisibleDropdown)
+  const setVisible = (value: boolean) => {
+    dispatch(onChangeVisible(value))
+  }
   const handleSelect = (city: ICity) => {
     onSelect(city)
     setVisible(false)

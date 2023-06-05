@@ -4,12 +4,14 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 
 interface IOptions {
   unit: string,
-  theme: string
+  theme: string,
+  visibleDropDown: boolean
 }
 
 const initialState: IOptions = {
   theme: 'light',
   unit: 'metric',
+  visibleDropDown: false
 }
 
 export const optionSlice = createSlice({
@@ -22,10 +24,13 @@ export const optionSlice = createSlice({
     setTheme: (state, action: PayloadAction<string>) => {
       state.theme = action.payload
       document.body.className = action.payload
+    },
+    onChangeVisible: (state, action: PayloadAction<boolean>) => {
+      state.visibleDropDown = action.payload
     }
   },
 
 })
 
-export const { setUnit, setTheme } = optionSlice.actions
+export const { setUnit, setTheme, onChangeVisible } = optionSlice.actions
 export default optionSlice.reducer
